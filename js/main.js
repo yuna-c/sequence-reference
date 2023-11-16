@@ -28,7 +28,6 @@ function createImgs(frame, imgNum, imgName = 'pic') {
 function imgLoadedCheck(imgs) {
 	imgs.forEach((img) => {
 		img.addEventListener('error', (e) => {
-			//console.log('해당 이미지 로딩 실패', e);
 			e.currentTarget.setAtrribute('src', 'img/logo.png');
 		});
 
