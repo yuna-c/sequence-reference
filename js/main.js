@@ -3,10 +3,11 @@ const mask = document.querySelector('.mask');
 const countEl = mask.querySelector('span');
 const imgNum = 200;
 
+//로딩시 (시스템이벤트)
 const imgs = createImgs(frame, imgNum);
 imgLoadedCheck(imgs);
+//마우스 무브시(사용자이벤트)
 frame.addEventListener('mousemove', showImg);
-//이벤트 객체가 함수에 호출할 때 인수 전달 하지 않더라도 직계자식함수로 연결되어 있기 때문에 자동으로 연결이 된다(다른 인수 들어갈 시 감싸야댐)
 
 // 동적으로 이미지 생성 함수 분리(돔 생성하자마자 바로 리턴해서 활용가능하도록 처리)
 function createImgs(frame, imgNum, imgName = 'pic') {
